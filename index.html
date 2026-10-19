@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Luiz Bianchi · Memórias & Utopias</title>
+  <meta name="description" content="Luiz Bianchi — escritor, dramaturgo e professor. Links de Memórias & Utopias.">
+  <meta property="og:title" content="Luiz Bianchi · Memórias & Utopias">
+  <meta property="og:description" content="Escritor, dramaturgo e professor.">
+  <meta property="og:image" content="assets/avatar.png">
+  <link rel="icon" href="assets/avatar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@500;700&family=Plus+Jakarta+Sans:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --creme: #fff7ec;
+      --vinho: #800e10;
+      --vinho-hover: #6a0b0d;
+      --tinta: #000;
+      --branco: #fff;
+
+      /* mobile (Figma 73:1045) */
+      --gap-nome: 70px;
+      --gap-secao: 78px;
+      --gap-links: 36px;
+      --gap-redes: 84px;
+      --nome: 32px;
+      --titulo-secao: 16px;
+      --botao: 16px;
+    }
+
+    /* desktop (Figma 70:60) */
+    @media (min-width: 768px) {
+      :root {
+        --gap-nome: 42px;
+        --gap-secao: 160px;
+        --gap-links: 42px;
+        --gap-redes: 190px;
+        --nome: 36px;
+        --titulo-secao: 20px;
+        --botao: 20px;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+
+    body {
+      background: var(--creme);
+      color: var(--tinta);
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 320px;
+      padding: 45px 24px 80px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 177px;
+      height: 177px;
+      display: block;
+    }
+
+    h1 {
+      margin-top: var(--gap-nome);
+      font-family: "Piazzolla", Georgia, serif;
+      font-weight: 500;
+      font-size: var(--nome);
+      line-height: 36px;
+    }
+
+    .bio {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    section {
+      width: 100%;
+      max-width: 652px;
+      margin-top: var(--gap-secao);
+    }
+
+    h2 {
+      font-family: "Piazzolla", Georgia, serif;
+      font-weight: 700;
+      font-size: var(--titulo-secao);
+      line-height: 36px;
+    }
+
+    .links {
+      list-style: none;
+      padding: 26px 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-links);
+    }
+
+    .botao {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 67px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: var(--vinho);
+      color: var(--branco);
+      font-weight: 600;
+      font-size: var(--botao);
+      line-height: 1.5;
+      text-decoration: none;
+      box-shadow: 0 8px 5px rgba(0, 0, 0, 0.22);
+      transition: background-color 150ms ease, transform 150ms ease;
+    }
+
+    .botao:hover { background: var(--vinho-hover); }
+    .botao:active { transform: translateY(1px); }
+
+    .botao:focus-visible,
+    .redes a:focus-visible {
+      outline: 2px solid var(--vinho);
+      outline-offset: 3px;
+    }
+
+    .redes {
+      list-style: none;
+      padding: 0;
+      margin-top: var(--gap-redes);
+      display: flex;
+      gap: 16px;
+    }
+
+    .redes a {
+      display: block;
+      border-radius: 50%;
+      transition: opacity 150ms ease;
+    }
+
+    .redes a:hover { opacity: 0.8; }
+    .redes img { display: block; width: 32px; height: 32px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="avatar" src="assets/avatar.png" width="177" height="177" alt="Retrato de Luiz Bianchi">
+
+    <h1>Luiz Bianchi</h1>
+    <p class="bio">Escritor, dramaturgo e professor.</p>
+
+    <section aria-labelledby="livro">
+      <h2 id="livro">MEMÓRIAS &amp; UTOPIAS</h2>
+      <!-- TODO: trocar "#" pelas URLs reais -->
+      <ul class="links">
+        <li><a class="botao" href="#" target="_blank" rel="noopener">Ver na Amazon</a></li>
+        <li><a class="botao" href="#" target="_blank" rel="noopener">Saiba mais sobre o lançamento</a></li>
+      </ul>
+    </section>
+
+    <nav aria-label="Redes sociais">
+      <!-- TODO: trocar "#" pelos perfis reais -->
+      <ul class="redes">
+        <li><a href="#" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/instagram.svg" width="32" height="32" alt=""></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="YouTube"><img src="assets/youtube.svg" width="32" height="32" alt=""></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="TikTok"><img src="assets/tiktok.svg" width="32" height="32" alt=""></a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>
